@@ -24,14 +24,18 @@ Product.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       unique: true,
+      defaultValue: 10,
       validate: {
         isEmail: true
       }
     },
-    //COME BACK
     category_id: {
       type: DataTypes.INTEGER,
-      
+      references: {
+        model: 'category',
+        key: 'id',
+        unique: false
+      }
     }
   },
   {
