@@ -23,7 +23,7 @@ router.get('/:id', async (req, res) => {
   try {
     const productData = await Product.findByPk(req.params.id, {
       // JOIN with travellers, using the Trip through table
-      include: [{ model: Traveller, through: Trip, as: 'location_travellers' }]
+      include: [{ model: Category, Tag }]
     });
 
     if (!productData) {
@@ -117,7 +117,7 @@ router.delete('/:id', async (req, res) => {
   try{
     const deletedProduct = await Product.destroy({
     where:{
-      product_id: req.params.product_id,
+      id: req.params.id,
     },
   });
   if (!deletedProduct) {
