@@ -17,4 +17,4 @@ aarone@berkeley.edu
 
 ## Links 
 Git hub : https://github.com/aaronespinoza/E-Commerce-Back-End
-Walk through : 
+Walk through : https://watch.screencastify.com/v/dbW3aThZhq1UK6kCis5J
